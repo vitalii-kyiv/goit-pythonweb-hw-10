@@ -1,0 +1,25 @@
+[project]
+name = "goit-pythonweb-hw-08"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "vitalii-kyiv", email = "v.s.chernous@gmail.com"}
+]
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi[standard] >=0.115.11",
+    "sqlalchemy >=2.0.39",
+    "alembic >=1.15.1",
+    "asyncpg >=0.30.0",
+    "pydantic-settings >=2.8.1"
+]
+
+[tool.poetry.scripts]
+dev = "uvicorn src.main:app --reload"
+
+[tool.poetry.group.dev.dependencies]
+black = "^25.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
